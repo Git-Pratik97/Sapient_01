@@ -1,0 +1,76 @@
+.hover-cell {
+  position: relative;
+}
+
+.hover-trigger {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  position: relative;
+}
+
+.hover-card {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 32px 0;
+  font-size: 0.95em;
+  border-radius: 0;
+  overflow-x: auto;
+  white-space: normal;
+  min-width: 500px;
+  max-width: 900px;
+  width: auto; /* <-- Let content decide width */
+}
+
+.hover-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--hover-bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+.hover-card table {
+  width: 90vw;
+  margin: 0 auto;
+  border-collapse: collapse;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.hover-card th, .hover-card td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.hover-card th {
+  background: #f8f9fa;
+  font-weight: bold;
+  text-align: left;
+  color: #111;
+  text-shadow: none;
+}
+
+.hover-card td {
+  color: #111;
+  background: transparent;
+}
+
+.hover-cell:hover .hover-card,
+.hover-trigger:focus .hover-card {
+  display: block;
+}

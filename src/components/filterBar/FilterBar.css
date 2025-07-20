@@ -1,0 +1,44 @@
+.filter-bar {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;   /* <-- Add this line to center */
+  background: linear-gradient(90deg, #e0f7fa 60%, #fffbe7 100%);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  margin: 1.5rem auto 2rem auto;
+  max-width: 1500px;
+  flex-wrap: wrap;
+}
+
+.filter-bar select,
+.filter-bar input[type="number"] {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #b2ebf2;
+  background: #fff;
+  font-size: 1rem;
+  color: #007b83;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,188,212,0.07);
+}
+
+.filter-bar select:focus,
+.filter-bar input[type="number"]:focus {
+  border: 1.5px solid #00bcd4;
+  box-shadow: 0 2px 8px #b2ebf2;
+}
+
+.filter-bar option {
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+}

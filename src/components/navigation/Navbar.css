@@ -1,0 +1,18 @@
+.custom-navbar {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.navbar-tagline {
+  font-size: 1rem;
+  color: #b2ebf2;
+  margin-top: -4px;
+  letter-spacing: 0.5px;
+}

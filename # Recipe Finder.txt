@@ -1,0 +1,151 @@
+# Recipe Finder
+
+A modern React application to search, sort, and discover delicious recipes from around the world. Features include search by name or cuisine, recipe suggestions, sorting, and detailed recipe views.
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Component Overview](#component-overview)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+- [Customization](#customization)
+
+---
+
+## Features
+
+- **Search Recipes** by name or cuisine with instant suggestions.
+- **Sort Recipes** by various fields (name, cuisine, rating, etc.).
+- **Recipe of the Day** highlight.
+- **Stats Bar** for quick insights.
+- **Responsive UI** with Bootstrap styling.
+- **Detailed Recipe Hover Cards** for quick info.
+
+---
+
+## Project Structure
+
+```
+.
+├── public/
+│   ├── index.html
+│   └── ... (static assets)
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   ├── index.css
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── components/
+│       ├── introduction/
+│       ├── navigation/
+│       ├── recipeOfTheDay/
+│       ├── RecipeTableComponent/
+│       ├── searchBoxComponent/
+│       └── statsBar/
+├── package.json
+└── README.md
+```
+
+---
+
+## Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Start the development server:**
+   ```sh
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+3. **Backend API:**
+   - The app expects a backend running at `http://localhost:8080` with endpoints for recipes and suggestions.
+
+---
+
+## Available Scripts
+
+- `npm start` — Runs the app in development mode.
+- `npm test` — Launches the test runner.
+- `npm run build` — Builds the app for production.
+- `npm run eject` — Ejects the app from Create React App.
+
+---
+
+## Component Overview
+
+### [`App`](src/App.js)
+Main application component. Manages global state, search mode, sorting, and renders all major UI components.
+
+### [`Navbar`](src/components/navigation/Navbar.js)
+Top navigation bar with branding and a toggle to switch between search by name or cuisine.
+
+### [`SearchBox`](src/components/searchBoxComponent/SearchBox.js)
+Search input with live suggestions. Calls backend endpoints for suggestions and search.
+
+### [`RecipeOfTheDay`](src/components/recipeOfTheDay/RecipeOfTheDay.js)
+Highlights a featured recipe.
+
+### [`Introduction`](src/components/introduction/Introduction.js)
+Welcome message and usage tips for new users.
+
+### [`StatsBar`](src/components/statsBar/StatsBar.js)
+Displays quick stats: total recipes, top cuisine, and highest-rated recipe.
+
+### [`RecipeTable`](src/components/RecipeTableComponent/RecipeTable.js)
+Displays recipes in a sortable table.
+
+### [`RecipeHoverCard`](src/components/RecipeTableComponent/recipeHover/RecipeHoverCard.js)
+Shows detailed recipe info on hover in the table.
+
+---
+
+## API Endpoints
+
+- `GET /recipes/recipename?recipeName=...` — Search recipes by name.
+- `GET /recipes/cuisine?cuisine=...` — Search recipes by cuisine.
+- `GET /api/recipes/suggestions?prefix=...` — Get recipe name suggestions.
+- `GET /api/recipes` — Fetch all recipes.
+
+> **Note:** Update endpoints in the code if your backend differs.
+
+---
+
+## Testing
+
+- Tests are written using [React Testing Library](https://testing-library.com/).
+- Run tests with:
+  ```sh
+  npm test
+  ```
+
+---
+
+## Customization
+
+- **Styling:** Uses Bootstrap and custom CSS for styling. Modify CSS files in each component folder for custom styles.
+- **API:** Update API endpoints in [`App.js`](src/App.js) and [`SearchBox.js`](src/components/searchBoxComponent/SearchBox.js) as needed.
+
+---
+
+## License
+
+This project is for educational/demo purposes. See [LICENSE](LICENSE) if present.
+
+---
+
+## Credits
+
+- [Create React App](https://github.com/facebook/create-react-app)
+- [Bootstrap](https://getbootstrap.com/)
+-
