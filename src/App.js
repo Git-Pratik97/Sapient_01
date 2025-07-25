@@ -54,7 +54,7 @@ const sortedRecipes = [...filteredRecipes].sort((a, b) => {
   const handleSearch = (query) => {
     if (!query) return;
 
-    setHasSearched(true); // <-- Add this line
+    setHasSearched(true); 
 
     const endpoint = searchByCuisine
       ? `http://localhost:8080/recipes/cuisine?cuisine=${query}`
